@@ -7,8 +7,9 @@ ULDNA is a protein-DNA binding site predictor through integrating protein langua
 (c) Install HHblits software, see details in https://github.com/soedinglab/hh-suite/wiki#hh-suite-databases.  
 (d) Download Uniclust30 database, see details in https://gwdu111.gwdg.de/~compbiol/uniclust/2023_02/.
 
-2. Feature Embedding Extraction  
-(a) Extract feature embeddings for ESM2 transformer  
+2. Training Model   
+(a) Extract feature embeddings from ESM2 transformer  
 python extract.py -ESM_Model_Name -Sequence_File -Output_Dir --repr_layers layer_number --include per_tok    
-(b)  
+(b) Extract feature embeddings from ProtTrans transformer
+ 
 

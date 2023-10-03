@@ -14,7 +14,7 @@ ULDNA is a protein-DNA binding site predictor through integrating protein langua
                    
     (b) Extract feature embeddings from ProtTrans transformer   
     python ./training/Extract_FE_ProtTrans.py sequence_file feature_embedding_dir   
-   e.g., python ./training/Extract_FE_ProtTrans.py ./sequence.fasta ./prottrans_feature/  
+    e.g., python ./training/Extract_FE_ProtTrans.py ./sequence.fasta ./prottrans_feature/  
 
     (c) Create MSA for query sequences
     python ./training/Create_MSA.py sequence_file msa_dir  
@@ -37,7 +37,7 @@ ULDNA is a protein-DNA binding site predictor through integrating protein langua
     (a) Download models from http://202.119.84.36:3079/uldna/model.zip.  
     (b) Use the downloaded model to predict DNA bindings sites from protein sequences.   
     python ./testing/test_model.py test_file model_type threshold result_dir  
-    python ./testing/test_model.py ./test.fasta PDNA-543 0.5 ./test_result/
+    e.g., python ./testing/test_model.py ./test.fasta PDNA-543 0.5 ./test_result/
     * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/     
     
 5. Cross-Validation    

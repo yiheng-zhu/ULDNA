@@ -17,5 +17,7 @@ ULDNA is a protein-DNA binding site predictor through integrating protein langua
    e.g., python ./training/Extract_FE_ProtTrans.py ./sequence.fasta ./prottrans_feature/  
 
     (c) Create MSA for query sequences
+    python ./training/Create_MSA.py sequence_file msa_dir
+    python ./training/Create_MSA.py ./sequence.fasta ./msa_workspace/
  
 

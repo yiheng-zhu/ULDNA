@@ -41,9 +41,8 @@ ULDNA is a protein-DNA binding site predictor through integrating protein langua
     * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/     
     
 5. Cross-Validation
-    python test_process.py test_file output_dir
     python Split_Cross.py sequence_file label_file output_dir, cross_number
-   e.g., python Split_Cross.py ./sequence.fasta ./sequence_label ./PDNA-543/Cross_Validation/ 10
+    e.g., python Split_Cross.py ./sequence.fasta ./sequence_label ./PDNA-543/Cross_Validation/ 10
 
 6. Evaluation  
     python evalution.py result_file, roc_file  

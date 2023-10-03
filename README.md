@@ -21,10 +21,22 @@ ULDNA is a protein-DNA binding site predictor through integrating protein langua
     e.g., python ./training/Create_MSA.py ./sequence.fasta ./msa_workspace/
 
     (d) Extract feature embeddings from EMS-MSA transformer  
-   python ./training/Extract_FE_MSA.py msa_dir feature_embedding_dir  
-   e.g., python ./training/Extract_FE_MSA.py ./msa_workspace/msa/ ./msa_feature/
+    python ./training/Extract_FE_MSA.py msa_dir feature_embedding_dir  
+    e.g., python ./training/Extract_FE_MSA.py ./msa_workspace/msa/ ./msa_feature/
 
-    (e) Training models
-   
+    (e) Training models  
+    Python ./training/training_model.py workdir round_time, GPU_id, GPU_ratio, max_iteration, is_used_ESM2, is_used_ProtTrans, is_used_EMS_MSA  
+    e.g., Python ./training/training_model.py ./PDNA-543/Independent/ 1 1 1.0 10 1 1 1  
+    * workdir should contain train_sequence.fasta, train_name_list, train_label, test_sequence.fasta, test_name_list, and test_label.    
+    * we implement each model in ten round, where round_time means the current round.
+    * is_used_ESM2 = 1 means that we use the feature embeddings of ESM2 transformer to training models.
+    * is_used_ProTrans = 1 means that we use the feature embeddings of ESM2 transformer to training models.
+    * is_used_ESM-MSA = 1 means that we use the feature embeddings of ESM2 transformer to training models.
+
+3. testing model
+    python ./testing/test_model.py test_file model_type threshold result_dir  
+    python ./testing/test_model.py ./test.fasta PDNA-543 0.5 ./test_result/
+    * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/     
+    
  
 

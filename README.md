@@ -10,10 +10,12 @@ ULDNA is a protein-DNA binding site predictor through integrating protein langua
 2. Training Model   
     (a) Extract feature embeddings from ESM2 transformer  
     python Extract_FE_ESM2.py ESM_Model_Name Sequence_File Feature_Embedding_Dir --repr_layers layer_number --include per_tok  
-    e.g., python ./training/Extract_FE_ESM2.py esm2_t36_3B_UR50D ./sequence.fasta ./esm_feature2/ --repr_layers 36 --include per_tok
+    e.g., python ./training/Extract_FE_ESM2.py esm2_t36_3B_UR50D ./sequence.fasta ./esm2_feature/ --repr_layers 36 --include per_tok
                    
     (b) Extract feature embeddings from ProtTrans transformer   
-    python ./training/Extract_FE_ProtTrans.py sequence_file feature_embedding_dir
-   e.g., python  
+    python ./training/Extract_FE_ProtTrans.py sequence_file feature_embedding_dir   
+   e.g., python ./training/Extract_FE_ProtTrans.py ./sequence.fasta ./prottrans_feature/  
+
+    (c) Create MSA for query sequences
  
 

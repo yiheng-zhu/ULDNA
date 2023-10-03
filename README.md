@@ -33,7 +33,7 @@ ULDNA is a protein-DNA binding site predictor through integrating protein langua
     * is_used_ProTrans = 1 means that we use the feature embeddings of ESM2 transformer to training models.
     * is_used_ESM-MSA = 1 means that we use the feature embeddings of ESM2 transformer to training models.
 
-3. testing model
+3. testing model  
     python ./testing/test_model.py test_file model_type threshold result_dir  
     python ./testing/test_model.py ./test.fasta PDNA-543 0.5 ./test_result/
     * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/     

@@ -35,7 +35,7 @@ The webserver of ULDNA is freely available at https://csbioinformatics.njust.edu
     * is_used_ESM-MSA = 1 means that we use the feature embeddings of ESM-MSA transformer to training models.
 
 4. Testing model  
-    (a) Download models from http://202.119.84.36:3079/uldna/model.zip.  
+    (a) Download models from https://csbioinformatics.njust.edu.cn/uldna/model.zip.  
     (b) Use the downloaded model to predict DNA bindings sites from protein sequences.   
     python ./testing/test_model.py test_file model_type threshold result_dir  
     e.g., python ./testing/test_model.py ./test.fasta PDNA-543 0.5 ./test_result/

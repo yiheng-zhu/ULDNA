@@ -49,7 +49,7 @@ Yi-Heng Zhu, Zi Liu, Zhiwei Ji*, Dong-Jun Yu*. ULDNA: Integrating Unsupervised M
 
     (e) Training models  
     Python ./training/training_model.py workdir round_time, GPU_id, GPU_ratio, max_iteration, is_used_ESM2, is_used_ProtTrans, is_used_EMS_MSA  
-    e.g., Python ./training/training_model.py ./PDNA-543/Independent/ 1 1 1.0 10 1 1 1  
+    e.g., Python ./training/training_model.py ./example/ 1 1 1.0 10 1 1 1  
     * workdir should contain train_sequence.fasta, train_name_list, train_label, test_sequence.fasta, test_name_list, and test_label.    
     * We implement each model in ten round, where round_time means the current round.
     * is_used_ESM2 = 1 means that we use the feature embeddings of ESM2 transformer to training models.

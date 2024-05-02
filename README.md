@@ -11,7 +11,7 @@ Note:
     (a) Install ESM2 transformer and ESM-MSA transformer, see details in https://github.com/facebookresearch/esm.  
     Note: You should modify the source codes of modules.py and msa_transformer.py for ESM-MSA, which are located in xxx/anaconda3/lib/pythonxxx/site-packages/esm/.  In modules.py, you should modify the codes from line 367 to line 386 (class ContactPredictionHead(nn.Module)). In msa_transformer.py, you should modify the codes from line 206 to line 241 (def forward()). The modified modules.py and msa_transformer.py can be found in ./ESM-MSA_Modification/.
    
-    (b) Install ProtTrans transformer, see details in https://github.com/agemagician/ProtTrans.
+    (b) Install ProtTrans transformer, see details in https://github.com/agemagician/ProtTrans.  
     Note: If you use the new version of ProtTrans updated after 2023/07/14,the “Extract_FE_ProtTrans.py” may have errors. You should use the "prott5_embedder.py (downloaded from https://github.com/agemagician/ProtTrans)" to extract feature embeddings for proteins sequences.
    
     (c) Install HHblits software, see details in https://github.com/soedinglab/hh-suite/wiki#hh-suite-databases.  

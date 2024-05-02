@@ -8,8 +8,8 @@ Note:
 (3) If you have any questions regarding tasks, please send an email to yihzhu@njau.edu.cn (Ph.D. Yi-Heng Zhu).  
 
 1. Install softwares   
-    (a) Install ESM2 transformer and ESM-MSA transformer, see details in https://github.com/facebookresearch/esm.
-    Note: You should modify the source codes of modules.py and msa_transformer.py for ESM-MSA, which are located in xxx/anaconda3/lib/pythonxxx/site-packages/esm/. 
+    (a) Install ESM2 transformer and ESM-MSA transformer, see details in https://github.com/facebookresearch/esm.  
+    Note: You should modify the source codes of modules.py and msa_transformer.py for ESM-MSA, which are located in xxx/anaconda3/lib/pythonxxx/site-packages/esm/.  
     (b) Install ProtTrans transformer, see details in https://github.com/agemagician/ProtTrans.   
     (c) Install HHblits software, see details in https://github.com/soedinglab/hh-suite/wiki#hh-suite-databases.  
     (d) Download Uniclust30 database, see details in https://gwdu111.gwdg.de/~compbiol/uniclust/2023_02/.

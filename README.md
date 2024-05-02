@@ -49,12 +49,13 @@ Yi-Heng Zhu, Zi Liu, Zhiwei Ji*, Dong-Jun Yu*. ULDNA: Integrating Unsupervised M
     * is_used_ESM-MSA = 1 means that we use the feature embeddings of ESM-MSA transformer to training models.
 
 4. Testing model  
-    (a) Download models from https://csbioinformatics.njust.edu.cn/uldna/model.zip.  
-    (b) Use the downloaded model to predict DNA bindings sites from protein sequences.  
-    (c) The web server only accepts proteins with a length less than 1000. If the length of the query protein sequence is larger than 1000, please split it into multiple protein sequences.  
-    python ./testing/test_model.py test_file model_type threshold  
-    e.g., python test_model.py test.fasta PDNA-543 0.5  
-    * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/     
+   We use the downloaded model to predict DNA bindings sites from protein sequences.  
+   (a) Download models from https://csbioinformatics.njust.edu.cn/uldna/model.zip.  
+   (b) Python ./testing/test_model.py test_file model_type threshold  
+       e.g., python test_model.py test.fasta PDNA-543 0.5  
+   * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/   
+   * The ULDNA Model only accepts proteins with a length less than 1000. If the length of the query protein sequence is larger than 1000, please split it into multiple protein sequences.  
+      
     
 6. Cross-Validation (Optional)   
     python Split_Cross.py sequence_file label_file output_dir, cross_number  

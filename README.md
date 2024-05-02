@@ -1,11 +1,9 @@
 # ULDNA
 ULDNA is a protein-DNA binding site predictor through integrating protein language models with LSTM-attention network.
 
-The webserver of ULDNA is freely available at https://csbioinformatics.njust.edu.cn/uldna/. 
-
-Note: 
-
-(1) The webserver can only accept the protein with length less than 1000. If the length of query protein is larger than 1000, please split the query protein. 
+The webserver of ULDNA is freely available at https://csbioinformatics.njust.edu.cn/uldna/.  
+Note:  
+(1) The webserver can only accept the protein with length less than 1000. If the length of query protein is larger than 1000, please split the query protein.  
 
 1. Install softwares   
     (a) Install ESM2 transformer and ESM-MSA transformer, see details in https://github.com/facebookresearch/esm.   

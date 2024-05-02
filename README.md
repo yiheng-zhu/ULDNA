@@ -17,7 +17,7 @@ Note:
     (c) Install HHblits software, see details in https://github.com/soedinglab/hh-suite/wiki#hh-suite-databases.  
     (d) Download Uniclust30 database, see details in https://gwdu111.gwdg.de/~compbiol/uniclust/2023_02/.
 
-3. Training models  
+3. Training models (Optional)
     (a) Extract feature embeddings from ESM2 transformer  
     python Extract_FE_ESM2.py ESM_Model_Name Sequence_File Feature_Embedding_Dir --repr_layers layer_number --include per_tok  
     e.g., python ./training/Extract_FE_ESM2.py esm2_t36_3B_UR50D ./sequence.fasta ./esm2_feature/ --repr_layers 36 --include per_tok
@@ -50,11 +50,11 @@ Note:
     e.g., python ./testing/test_model.py ./test.fasta PDNA-543 0.5 ./test_result/
     * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/     
     
-5. Cross-Validation    
+5. Cross-Validation (Optional)   
     python Split_Cross.py sequence_file label_file output_dir, cross_number  
     e.g., python Split_Cross.py ./sequence.fasta ./sequence_label ./PDNA-543/Cross_Validation/ 10
 
-6. Evaluation  
+6. Evaluation (Optional) 
     python evalution.py result_file, roc_file  
     e.g., python evalution.py ./result.txt ./roc.txt  
 

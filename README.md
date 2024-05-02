@@ -40,8 +40,8 @@ Yi-Heng Zhu, Zi Liu, Zhiwei Ji*, Dong-Jun Yu*. ULDNA: Integrating Unsupervised M
     e.g., python ./training/Extract_FE_ProtTrans.py ./sequence.fasta ./prottrans_feature/  
 
     (c) Create MSA for query sequences
-    python ./training/Create_Single_HHM sequence_file msa_dir  
-    e.g., python ./training/Create_Single_HHM ./sequence.fasta ./msa_workspace/
+    python ./training/Create_Single_HHM.py sequence_file msa_dir  
+    e.g., python ./training/Create_Single_HHM.py ./sequence.fasta ./msa_workspace/
 
     (d) Extract feature embeddings from EMS-MSA transformer  
     python ./training/Extract_FE_MSA.py msa_dir feature_embedding_dir  

@@ -32,8 +32,8 @@ Yi-Heng Zhu, Zi Liu, Zhiwei Ji*, Dong-Jun Yu*. ULDNA: Integrating Unsupervised M
     
 3. Training models (Optional)  
     (a) Extract feature embeddings from ESM2 transformer  
-    python Extract_FE_ESM2.py ESM_Model_Name Sequence_File Feature_Embedding_Dir --repr_layers layer_number --include per_tok  
-    e.g., python ./training/Extract_FE_ESM2.py esm2_t36_3B_UR50D ./sequence.fasta ./esm2_feature/ --repr_layers 36 --include per_tok
+    python Extract_FE_ESM2.py sequence_File Feature_embedding_Dir   
+    e.g., python ./training/Extract_FE_ESM2.py ./sequence.fasta ./esm2_feature/ 
                    
     (b) Extract feature embeddings from ProtTrans transformer   
     python ./training/Extract_FE_ProtTrans.py sequence_file feature_embedding_dir   

@@ -50,16 +50,17 @@ Yi-Heng Zhu, Zi Liu, Zhiwei Ji*, Dong-Jun Yu*. ULDNA: Integrating Unsupervised M
 
 4. Testing model  
     (a) Download models from https://csbioinformatics.njust.edu.cn/uldna/model.zip.  
-    (b) Use the downloaded model to predict DNA bindings sites from protein sequences.   
-    python ./testing/test_model.py test_file model_type threshold result_dir  
-    e.g., python ./testing/test_model.py ./test.fasta PDNA-543 0.5 ./test_result/
+    (b) Use the downloaded model to predict DNA bindings sites from protein sequences.  
+    (c) The web server only accepts proteins with a length less than 1000. If the length of the query protein sequence is larger than 1000, please split it into multiple protein sequences.  
+    python ./testing/test_model.py test_file model_type threshold  
+    e.g., python test_model.py test.fasta PDNA-543 0.5  
     * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/     
     
-5. Cross-Validation (Optional)   
+6. Cross-Validation (Optional)   
     python Split_Cross.py sequence_file label_file output_dir, cross_number  
     e.g., python Split_Cross.py ./sequence.fasta ./sequence_label ./PDNA-543/Cross_Validation/ 10
 
-6. Evaluation (Optional) 
+7. Evaluation (Optional) 
     python evalution.py result_file, roc_file  
     e.g., python evalution.py ./result.txt ./roc.txt  
 

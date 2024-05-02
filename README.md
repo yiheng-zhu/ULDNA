@@ -22,6 +22,14 @@ Yi-Heng Zhu, Zi Liu, Zhiwei Ji*, Dong-Jun Yu*. ULDNA: Integrating Unsupervised M
     (c) Install HHblits software, see details in https://github.com/soedinglab/hh-suite/wiki#hh-suite-databases.  
     (d) Download Uniclust30 database, see details in https://gwdu111.gwdg.de/~compbiol/uniclust/2023_02/.
 
+2. Prediction    
+   We use the downloaded model to predict DNA bindings sites from protein sequences.  
+   (a) Download models from https://csbioinformatics.njust.edu.cn/uldna/model.zip.  
+   (b) Python ./testing/test_model.py test_file model_type threshold  
+       e.g., python test_model.py test.fasta PDNA-543 0.5  
+   * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/   
+   * The ULDNA Model only accepts proteins with a length less than 1000. If the length of the query protein sequence is larger than 1000, please split it into multiple protein sequences.
+    
 3. Training models (Optional)  
     (a) Extract feature embeddings from ESM2 transformer  
     python Extract_FE_ESM2.py ESM_Model_Name Sequence_File Feature_Embedding_Dir --repr_layers layer_number --include per_tok  
@@ -48,20 +56,14 @@ Yi-Heng Zhu, Zi Liu, Zhiwei Ji*, Dong-Jun Yu*. ULDNA: Integrating Unsupervised M
     * is_used_ProTrans = 1 means that we use the feature embeddings of ProtTrans transformer to training models.
     * is_used_ESM-MSA = 1 means that we use the feature embeddings of ESM-MSA transformer to training models.
 
-4. Testing model  
-   We use the downloaded model to predict DNA bindings sites from protein sequences.  
-   (a) Download models from https://csbioinformatics.njust.edu.cn/uldna/model.zip.  
-   (b) Python ./testing/test_model.py test_file model_type threshold  
-       e.g., python test_model.py test.fasta PDNA-543 0.5  
-   * we provide two models which are trained on PDNA-543 and PDNA-335 datasets, respectively, see details in ./model/   
-   * The ULDNA Model only accepts proteins with a length less than 1000. If the length of the query protein sequence is larger than 1000, please split it into multiple protein sequences.  
+
       
     
-6. Cross-Validation (Optional)   
+4. Cross-Validation (Optional)   
     python Split_Cross.py sequence_file label_file output_dir, cross_number  
     e.g., python Split_Cross.py ./sequence.fasta ./sequence_label ./PDNA-543/Cross_Validation/ 10
 
-7. Evaluation (Optional) 
+5. Evaluation (Optional) 
     python evalution.py result_file, roc_file  
     e.g., python evalution.py ./result.txt ./roc.txt  
 

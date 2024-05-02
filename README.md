@@ -1,5 +1,6 @@
 # ULDNA
-ULDNA is a protein-DNA binding site predictor through integrating protein language models with LSTM-attention network.
+ULDNA is a protein-DNA binding site predictor through integrating protein language models with LSTM-attention network.  
+The webserver of ULDNA is freely available at https://csbioinformatics.njust.edu.cn/uldna/.  
 Note:  
 (1) The web server only accepts proteins with a length less than 1000. If the length of the query protein sequence is larger than 1000, please split it into multiple protein sequences.  
 (2) Due to limited computational resources, the number of submitted proteins  cannot exceed 10. Do not submit the next task while the previous prediction task is still in progress.  
@@ -7,7 +8,7 @@ Note:
 
 Reference.
 Yi-Heng Zhu, Zi Liu, Zhiwei Ji*, Dong-Jun Yu*. ULDNA: Integrating Unsupervised Multi-Source Language Models with LSTM-Attention Network for High-Accuracy Protein-DNA Binding Site Prediction. Briefings in Bioinformatics. 2024, 25(2):bbae040. 
-The webserver of ULDNA is freely available at https://csbioinformatics.njust.edu.cn/uldna/.  
+
 
  
 

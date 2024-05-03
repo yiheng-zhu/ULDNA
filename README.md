@@ -3,7 +3,7 @@ ULDNA is a protein-DNA binding site predictor through integrating protein langua
 The webserver of ULDNA is freely available at https://csbioinformatics.njust.edu.cn/uldna/.  
 Note:  
 (1) The web server only accepts proteins with a length less than 1000. If the length of the query protein sequence is larger than 1000, please split it into multiple protein sequences.  
-(2) Due to limited computational resources, the number of submitted proteins  cannot exceed 10. Do not submit the next task while the previous prediction task is still in progress.  
+(2) Due to limited computational resources, the number of submitted proteins  cannot exceed 5. Do not submit the next task while the previous prediction task is still in progress.  
 (3) If you have any questions regarding tasks, please send an email to yihzhu@njau.edu.cn (Ph.D. Yi-Heng Zhu). 
 
 Reference.
